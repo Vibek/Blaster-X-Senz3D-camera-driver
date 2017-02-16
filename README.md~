@@ -20,14 +20,5 @@ Normal installtion in ubuntu 12.04 LTS can be done by the following step:
          Cd /opt/softkinetic/DepthSenseSDK/bin 
       
          ./DepthSenseViewer 
-
-9. If once you will run the above command, DepthSenseViewer will appeared. In some case it might be show "No device or node Selected". At-least in my case it does happens. Best to resolve the problem is to give a permission to the USB ports to access the camera. One can done with following installation.
-
-        sudo apt-get install gstreamer-tools
-
-        gst-launch v4l2src device=/dev/video0 ! 'video/x-raw-yuv,width=640,height=480,framerate=30/1' ! xvimagesink
-
-10. If all done according the suggestion a window will pop up with RGB stream.
-
       
    
