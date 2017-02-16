@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!-- 
+Default launch file to run two softkinetic cameras simultaneously. 
+Analogously, an arbitrary number of camaras can be started. 
+The arguments given are the device indices of the cameras determined by the DepthSense deamon.   
+-->
+<launch>
+	<param name="use_sim_time" value="false" />
+  	<node name="softkinetic_left" pkg="softkinetic_camera" type="softkinetic_bringup_node" args="0" >
+  		<param name="camera_link" type="string" value="/softkinetic_left_link" /> 
+  	</node>
+
+  	<node name="softkinetic_right" pkg="softkinetic_camera" type="softkinetic_bringup_node" args="1" >
+  		<param name="camera_link" type="string" value="/softkinetic_right_link" /> 
+  	</node>
+
+	<node pkg="softkinetic_camera" type="skeleton_tracker" name="skeleton_tracker" output="screen" />
+
+	<node pkg = "rviz" type ="rviz" name="rviz" args="-d /home/vibek/softkinetic_camera/markers_from_tf.rviz" />
+	
+</launch>

@@ -1,0 +1,24 @@
+<package>
+  <description brief="softkinetic_camera">
+    Creative Blaster X senz3D camera driver package
+  </description>
+  <author>Vibekananda Dutta (Originally developed by Felipe Garcia Lopez)</author>
+  <license>BSD</license>
+  <review status="unreviewed" notes=""/>
+  <depend package="rospy"/>
+  <depend package="roscpp"/>
+  <depend package="geometry_msgs"/>
+  <depend package="roslib"/>
+  <depend package="tf"/>
+  <depend package="std_msgs"/>
+  <depend package="sensor_msgs"/>
+  <depend package="image_transport"/>
+  <depend package="cv_bridge"/>
+  <depend package="pcl_ros"/>
+  <depend package="opencv2"/>
+  <depend package="message_generation"/>
+  <depend package="message_runtime"/>
+  <depend package="eigen"/>
+</package>
+
+
