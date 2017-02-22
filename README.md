@@ -22,6 +22,6 @@ Normal installtion in ubuntu 12.04 LTS can be done by the following step: 1. Dow
              sudo apt-get install gstreamer-tools
 
              gst-launch v4l2src device=/dev/video0 ! 'video/x-raw-yuv,width=640,height=480,framerate=30/1' ! xvimagesink
-7. If all done according the suggestion a window will pop up with RGB stream.
+7. If all done according to the suggestion a window will pop up with RGB stream.
 
 P.S. According to the official statement of Creative Lab that Blaster-X Sensz3D camera doesn't support linux. This is just a small hack to access the camera in Linux. 
