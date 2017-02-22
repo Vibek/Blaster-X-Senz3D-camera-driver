@@ -6,20 +6,20 @@ Normal installtion in ubuntu 12.04 LTS can be done by the following step:
 1. Download the SDK DepthSenseSDK-1.9.0-5.i386-tar.run from our repository.
 2. Go to folder where it is downloaded
 
-     chmod +x DepthSenseSDK-1.2.2.958-i386-gcc-tar.run
-     sudo ./DepthSenseSDK-1.2.2.958-i386-gcc-tar.run
+        chmod +x DepthSenseSDK-1.2.2.958-i386-gcc-tar.run
+        sudo ./DepthSenseSDK-1.2.2.958-i386-gcc-tar.run
 
 5. check the installation is succesfull by check the /opt/softkinetic/DepthSenseSDK/lib exist or not
 6. Then run sudo ldconfig to regenerate the ld.so cache or what ever. Now you can link agianst the libraries.
 7. Next, you need to fake having libudev.so.0. Thankfully libudev.so.1 worked fine so run
     
-       sudo ln -s /lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libudev.so.0
+        sudo ln -s /lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/libudev.so.0
 
 8. Once you done with step 7 successfully, your next task to run a sample file to check out if everything works well.
 
-         Cd /opt/softkinetic/DepthSenseSDK/bin 
+        Cd /opt/softkinetic/DepthSenseSDK/bin 
       
-         ./DepthSenseViewer 
+        ./DepthSenseViewer 
 
 9. If once you will run the above command, DepthSenseViewer will appeared. In some case it might be show "No device or node Selected". At-least in my case it does happens. Best to resolve the problem is to give a permission to the USB ports to access the camera. One can done with following installation.
 
@@ -27,7 +27,9 @@ Normal installtion in ubuntu 12.04 LTS can be done by the following step:
 
         gst-launch v4l2src device=/dev/video0 ! 'video/x-raw-yuv,width=640,height=480,framerate=30/1' ! xvimagesink
 
-10. If all done according the suggestion a window will pop up with RGB stream.
+10. If all done according to the suggestion, a window will pop up with RGB stream.
+
+P.S. According to the official statement of Creative Lab that Blaster-X Sensz3D camera doesn't support linux. This is just a small hack to access the camera in Linux. 
 
       
    
